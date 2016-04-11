@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jessica's Widgets</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class='my-widgets'>
+    	<div id='email-widget'>
+    		<div class='form'>
+		    	<label for="Contacts">Contacts</label>
+		    	<div class="input-group email" >
+				<input type="email" name='email' class="form-control" id='to-email' placeholder="Enter valid email">
+				<span class="input-group-btn">
+				<button class="btn btn-default" type="submit" onclick="addContact(document.getElementById('to-email').value)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+				</span>
+	    	    </div>
+
+		    	<label for="Subject">Subject</label>
+		    	<div class="input-group">
+				<input type="text" name='subject' class="form-control" placeholder="Add a subject (optional)" style="width: 260px; border-radius: 5px">
+				</div>
+	    		
+	    		<label for="Message">Message</label>
+	    		<div class="form-group">
+	    		<textarea type='text' class="form-control" name='message' rows='5' placeholder="Add a message"></textarea>
+	    		</div>
+    		</div>
+
+    		<div class='submit-form'>
+    			<label class="checkbox-inline"><input id='check-me' type="checkbox" value="">Save a copy</label>
+	    		<button id='send-email' type='submit' onclick='sendEmail()'><span class="glyphicon glyphicon-play" aria-hidden="true"></span>Send Mail</button>
+    		</div>
+    	</div>
+    	<div id='artist-widget'>
+    		<div class='artwork'><img id='painting' onclick='viewArt()' src='http://i.imgur.com/vXWGS88.jpg' /></div>
+    		<div class='latest-comment'>
+    			<div class='avatar'><img id='user-avatar' src='http://i.imgur.com/eHSsjZk.gif' /></div>
+    			<div class='user-name'><h4 id='users-name'>Vincent van Gogh</h4></div>
+    			<div class='comment'><p id='users-comment'>Nice work! I really love your style!</p></div>
+    		</div>
+    		<div class='img-data'>
+    			<div class='views' data-toggle="tooltip" data-placement="bottom" title="views"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"><p>1989</p></span></div>
+    			<div class='comments' data-toggle="tooltip" data-placement="bottom" title="comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"><p>120</p></span></div>
+    			<div class='likes' data-toggle="tooltip" data-placement="bottom" title="likes"><span class="glyphicon glyphicon-heart" aria-hidden="true"><p>220</p></span></div>
+    		</div>
+    	</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "Jessica's Widgets",
+  "version": "1.0.0",
+  "description": "two simple html widgets",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jessica Wonmi Park",
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert": "^1.1.3"
+  }
+}
